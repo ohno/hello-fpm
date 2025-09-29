@@ -1,2 +1,2 @@
 # hello-fpm
-My cool new project!
+[![CI](https://github.com/ohno/hello-fpm/actions/workflows/ci.yml/badge.svg)](https://github.com/ohno/hello-fpm/actions/workflows/ci.yml)
