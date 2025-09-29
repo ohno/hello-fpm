@@ -21,7 +21,7 @@ Create a new fpm project:
 ```sh
 fpm new hello-fpm
 cd hello-fpm
-git branch -m master main
+# Fix fpm.toml by hand
 git add .
 git commit -m "Initial commit"
 git branch -m master main
@@ -39,6 +39,7 @@ git add .gitignore
 git commit -m "Add .gitignore"
 
 gh api /licenses/mit --jq .body > LICENSE
+# Fix LICENSE by hand
 git add LICENSE
 git commit -m "Add LICENSE"
 
@@ -48,8 +49,14 @@ git commit -m "Add ci.yml"
 
 sed -i '/My cool new project!/d' README.md
 echo "[![CI](https://github.com/$(gh api user --jq .login)/$(basename -s .git $(git config --get remote.origin.url))/actions/workflows/ci.yml/badge.svg)](https://github.com/$(gh api user --jq .login)/$(basename -s .git $(git config --get remote.origin.url))/actions/workflows/ci.yml)" >> README.md
+# Fix URL by hand
 git add README.md
 git commit -m "Update README.md"
 
 git push
 ```
+
+Rewrite some lines yourself:
+https://github.com/ohno/hello-fpm/blob/e09cd27911cb56c1991450e0e9396be990cd7b21/README.md?plain=1#L2
+https://github.com/ohno/hello-fpm/blob/54a753d390a02cfeafa796a1aeb9d66778c0bc40/LICENSE#L3
+https://github.com/ohno/hello-fpm/blob/54a753d390a02cfeafa796a1aeb9d66778c0bc40/fpm.toml#L2-L6
