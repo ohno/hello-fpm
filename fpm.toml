@@ -4,5 +4,4 @@ license = "license"
 author = "ohno"
 maintainer = "ohno.github@gmail.com"
 copyright = "Copyright 2025, ohno"
-default = false
 
